@@ -50,6 +50,7 @@ else
 fi
 
 cp custom.sh ${ETC_PROFILE_D}/custom.sh
+cp ./custom_tools/* ${CUSTOM_BASH_TOOL_PATH} -f
 
 command_exist git && git_config
 
