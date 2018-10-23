@@ -55,4 +55,4 @@ cp ./custom_tools/* ${CUSTOM_BASH_TOOL_PATH} -f
 command_exist git && git_config
 
 #screen
-cp .screenrc ~/.screenrc -f
+cp screenrc ~/.screenrc -f
