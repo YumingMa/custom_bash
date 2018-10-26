@@ -1,1 +1,0 @@
-grep -nr --color=auto --exclude="tags" --exclude="*.out" --exclude-dir=libcurl --exclude-dir=json-c-0.12.1 --exclude-dir=libevent --exclude-dir=librtc --exclude-dir=libClient  $1 ./
