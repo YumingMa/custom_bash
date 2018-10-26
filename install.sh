@@ -35,7 +35,6 @@ function git_config()
 {
 	git config --global color.ui true
 }
-
 ###############################################################
 #               entry
 ###############################################################
@@ -56,3 +55,4 @@ command_exist git && git_config
 
 #screen
 cp screenrc ~/.screenrc -f
+
