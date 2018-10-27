@@ -34,6 +34,7 @@ function command_exist()
 function git_config()
 {
 	git config --global color.ui true
+    git config --global core.autocrlf input
 }
 ###############################################################
 #               entry
