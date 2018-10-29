@@ -11,9 +11,14 @@ syntax on
 "括号匹配高亮
 set showmatch
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
-set mouse=a
+set mouse=n
 set selection=exclusive
 set selectmode=mouse,key
+"相对行<F8>切换
+nnoremap <silent> <F8>    :set nonu! norelativenumber!<CR>
+"自动缩进与C语言风格缩进
+set autoindent
+set cindent
 
 "自动补全
 :inoremap ( ()<ESC>i
