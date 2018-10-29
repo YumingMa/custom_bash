@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -u -e
+set -u -e -x
 
 
 ###############################################################
@@ -58,3 +58,4 @@ cp screenrc ~/.screenrc -f
 
 #vim
 cp vimrc ~/.vimrc -f
+cp vim/* ~/.vim/ -rf
