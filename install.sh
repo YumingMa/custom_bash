@@ -56,3 +56,5 @@ command_exist git && git_config
 #screen
 cp screenrc ~/.screenrc -f
 
+#vim
+cp vimrc ~/.vimrc -f
