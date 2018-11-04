@@ -12,8 +12,8 @@ syntax on
 set showmatch
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 set mouse=n
-set selection=exclusive
-set selectmode=mouse,key
+"set selection=exclusive
+"set selectmode=mouse,key
 "相对行<F8>切换
 nnoremap <silent> <F8>    :set nonu! norelativenumber!<CR>
 "自动缩进与C语言风格缩进
@@ -41,7 +41,7 @@ filetype plugin indent on
 set completeopt=longest,menu
 
 "默认打开Taglist 
-let Tlist_Auto_Open=1 
+"let Tlist_Auto_Open=1 
 """""""""""""""""""""""""""""" 
 " Tag list (ctags) 
 """""""""""""""""""""""""""""""" 
