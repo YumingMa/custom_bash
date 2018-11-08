@@ -11,7 +11,7 @@ syntax on
 "括号匹配高亮
 set showmatch
 " 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
-set mouse=n
+"set mouse=n
 "set selection=exclusive
 "set selectmode=mouse,key
 "相对行<F8>切换
