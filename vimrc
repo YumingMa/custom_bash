@@ -2,43 +2,12 @@ set expandtab
 set ts=4
 set shiftwidth=4
 set paste
-"搜索高亮
 set hlsearch
-"当前行下划线
 set cursorline
-"语法高亮
 syntax on
-"括号匹配高亮
 set showmatch
-" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
-"set mouse=n
-"set selection=exclusive
-"set selectmode=mouse,key
 "相对行<F8>切换
-nnoremap <silent> <F8>    :set nonu! norelativenumber!<CR>
-"自动缩进与C语言风格缩进
-set autoindent
-set cindent
-
-"自动补全
-:inoremap ( ()<ESC>i
-:inoremap ) <c-r>=ClosePair(')')<CR>
-:inoremap { {<CR>}<ESC>O
-:inoremap } <c-r>=ClosePair('}')<CR>
-:inoremap [ []<ESC>i
-:inoremap ] <c-r>=ClosePair(']')<CR>
-:inoremap " ""<ESC>i
-:inoremap ' ''<ESC>i
-function! ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else
-        return a:char
-    endif
-endfunction
-filetype plugin indent on 
-"打开文件类型检测, 加了这句才可以用智能补全
-set completeopt=longest,menu
+nnoremap <silent> <F8> :set nonu! norelativenumber!<CR>
 
 "默认打开Taglist 
 "let Tlist_Auto_Open=1 

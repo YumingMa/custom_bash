@@ -8,3 +8,8 @@ PS1="\u@$(hostname -I | awk '{print $1}') \W->"
 
 export RTE_SDK=/root/mayuming/dpdk-stable-17.11.4
 export RTE_TARGET=build
+
+
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+fi
