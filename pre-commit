@@ -1,28 +1,17 @@
 #!/bin/sh
 
-function check_and_format()
-{
-    # Find files with trailing whitespace
-    for FILE in $(git diff-index --check --cached HEAD -- | sed '/^[+-]/d' | sed -E 's/:[0-9]+:.*//' | uniq)
-    do
-        # Fix them!
-        sed -i -E 's/[[:space:]]*$//g' ${FILE}
-        git add ${FILE}
-    done
-}
-
 function force_format()
 {
-    for FILE in $(git status -s  | awk '{print $2}')
+    for FILE in $(git diff-index --name-only --cached HEAD)
     do
-        sed -i -E 's/[[:space:]]*$//g' ${FILE}
-        git add ${FILE}
+        if [ -f ${FILE} ];then
+            sed -i -E 's/[[:space:]]*$//g' ${FILE}
+            dos2unix ${FILE}
+            git add ${FILE}
+        fi
     done
 }
 
-
 if git rev-parse --verify HEAD >/dev/null 2>&1 ; then
-   check_and_format
-else
    force_format
 fi
