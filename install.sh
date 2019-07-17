@@ -59,5 +59,7 @@ cp screenrc ~/.screenrc -f
 
 #vim
 cp vimrc ~/.vimrc -f
-
+if test -d  ~/.vim/;then
+    mkdir -p ~/.vim
+fi
 cp vim/* ~/.vim/ -rf
