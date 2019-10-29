@@ -4,8 +4,7 @@ alias grep='grep --color --exclude="tags" --exclude="cscope.out" --exclude="csco
 PATH=${PATH}:/opt/custom_tool:/opt/platform-tools:/opt/android-ndk-r19c/my-toolchain/bin
 
 #custom PS1
-PS1="\u@$(hostname -I | awk '{print $1}') \W->"
-
+export PS1="\[\033[32m\]\u@$(hostname -I | awk '{print $1}'):\w $(git symbolic-ref --short -q HEAD 2>/dev/null) \[\033[m\]\n->"
 export RTE_SDK=/root/mayuming/dpdk-stable-17.11.4
 export RTE_TARGET=build
 
